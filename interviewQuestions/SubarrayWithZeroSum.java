@@ -30,8 +30,8 @@ public class SubarrayWithZeroSum {
 		Set<Integer> set = new HashSet<>();
 		int sum = 0;
 		for (int element : a) {
-			set.add(sum);
 			sum += element;
+			set.add(sum);
       //Zero sum will only exist if the cumulative sum of the elements excluding the current element
       //and after including the current element are equal
 			if (set.contains(sum - k)) {
